@@ -11,10 +11,12 @@ public class FactorySymetricLibraryAlgo {
 
 		if (algo.equals(ConstantAlgo.CHACHA20.toLowerCase())) {
 			symmetricLibrary = new ChaCha20();
-		} else if (algo.equals(ConstantAlgo.IDEA.toLowerCase())) {
-			symmetricLibrary = new IDEA();
-		} else if (algo.equals(ConstantAlgo.SERPENT.toLowerCase())) {
-			symmetricLibrary = new Serpent();
+		} else if (algo.equals(ConstantAlgo.SALSA20.toLowerCase())) {
+			symmetricLibrary = new Salsa20();
+		} else if (algo.equals(ConstantAlgo.HC256.toLowerCase())) {
+			symmetricLibrary = new HC256();
+		} else if (algo.equals(ConstantAlgo.HC128.toLowerCase())) {
+			symmetricLibrary = new HC256();
 		}
 
 		return symmetricLibrary;

@@ -30,8 +30,9 @@ public class ConstantAlgo {
 
 	// mã hóa dùng thư viện
 	public static final String CHACHA20 = "ChaCha20";
-	public static final String IDEA = "IDEA";
-	public static final String SERPENT = "Serpent";
+	public static final String SALSA20 = "Salsa20";
+	public static final String HC256 = "HC256";
+	public static final String HC128 = "HC128";
 
 	// hash
 	public static final String MD5 = "MD5";

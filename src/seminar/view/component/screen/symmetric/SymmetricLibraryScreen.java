@@ -16,7 +16,7 @@ public class SymmetricLibraryScreen extends Screen {
 	public SymmetricLibraryScreen() {
 		super(Constant.titlePanelLib);
 
-		String[] items1 = { ConstantAlgo.CHACHA20, ConstantAlgo.IDEA, ConstantAlgo.SERPENT };
+		String[] items1 = { ConstantAlgo.CHACHA20, ConstantAlgo.SALSA20, ConstantAlgo.HC256, ConstantAlgo.HC128 };
 		cbAlgo = new JComboBox<String>(items1);
 		panelOperation.add(cbAlgo);
 

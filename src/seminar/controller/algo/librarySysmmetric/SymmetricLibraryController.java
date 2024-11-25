@@ -46,41 +46,22 @@ public class SymmetricLibraryController extends Controller implements ActionList
 		if (src.equals(view.getBtnCreateKey())) {
 			sysmetricLibraryAlgo = FactorySymetricLibraryAlgo.createSymmetricLibraryAlgo(algoName);
 
-			if (algoName.equals(ConstantAlgo.CHACHA20)) {
-				if (openFolderAndSaveKey() && openFolderAndSaveIV()) {
-					view.getBtnEncrypt().setEnabled(true);
-					view.getBtnDecrypt().setEnabled(true);
-					view.getBtnEncryptFile().setEnabled(true);
-					view.getBtnDecryptFile().setEnabled(true);
-				}
-			} else {
-				if (openFolderAndSaveKey()) {
-					view.getBtnEncrypt().setEnabled(true);
-					view.getBtnDecrypt().setEnabled(true);
-					view.getBtnEncryptFile().setEnabled(true);
-					view.getBtnDecryptFile().setEnabled(true);
-				}
+			if (openFolderAndSaveKey() && openFolderAndSaveIV()) {
+				view.getBtnEncrypt().setEnabled(true);
+				view.getBtnDecrypt().setEnabled(true);
+				view.getBtnEncryptFile().setEnabled(true);
+				view.getBtnDecryptFile().setEnabled(true);
 			}
 
 		} else if (src.equals(view.getBtnLoadKey())) {
 			sysmetricLibraryAlgo = FactorySymetricLibraryAlgo.createSymmetricLibraryAlgo(algoName);
 
-			if (algoName.equals(ConstantAlgo.CHACHA20)) {
-				if (openFolderAndLoadKey() && openFolderAndLoadIV()) {
-					view.getBtnEncrypt().setEnabled(true);
-					view.getBtnDecrypt().setEnabled(true);
-					view.getBtnEncryptFile().setEnabled(true);
-					view.getBtnDecryptFile().setEnabled(true);
-				}
-			} else {
-				if (openFolderAndLoadKey()) {
-					view.getBtnEncrypt().setEnabled(true);
-					view.getBtnDecrypt().setEnabled(true);
-					view.getBtnEncryptFile().setEnabled(true);
-					view.getBtnDecryptFile().setEnabled(true);
-				}
+			if (openFolderAndLoadKey() && openFolderAndLoadIV()) {
+				view.getBtnEncrypt().setEnabled(true);
+				view.getBtnDecrypt().setEnabled(true);
+				view.getBtnEncryptFile().setEnabled(true);
+				view.getBtnDecryptFile().setEnabled(true);
 			}
-
 		} else if (src.equals(view.getBtnEncryptFile())) {
 			String pathSrc = fileTransfer.getSrc();
 			if (pathSrc == null) {
